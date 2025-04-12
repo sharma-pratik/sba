@@ -5610,3 +5610,9 @@ select.form-select option {
   transform: rotate(-45deg);
   transition-delay: 0s, 0.2s;
 }/*# sourceMappingURL=style.css.map */
+
+
+.obacity_images {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
