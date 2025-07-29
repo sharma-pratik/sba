@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Thememarch" />
+    <!-- Favicon Icon -->
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <!-- Site Title -->
+    <title>1MileRun Club - SBA Strength Bar Athlete</title>
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/aos.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        /* Grey & Black Theme - Sleek & Modern */
+        .run-hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #1A1A1A 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            animation: waveAnimation 8s ease-in-out infinite;
+        }
+        
+        @keyframes waveAnimation {
+            0%, 100% { background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #1A1A1A 100%); }
+            50% { background: linear-gradient(135deg, #34495E 0%, #1A1A1A 50%, #2C3E50 100%); }
+        }
+        
+        .run-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/img/hero_slider_bg_1.png') center/cover;
+            opacity: 0.05;
+        }
+        
+        .run-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .official-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .official-logo:hover {
+            transform: scale(1.05);
+            border-color: #E74C3C;
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+        }
+        
+        .run-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .run-hero p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        .location-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .location-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border-color: #E74C3C;
+        }
+        
+        .location-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #E74C3C, #C0392B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+        }
+        
+        .benefits-section {
+            background: #01010f;
+            padding: 80px 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .benefit-card:hover::before {
+            left: 100%;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: #E74C3C;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #E74C3C, #C0392B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .testimonial-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #01010f, #0a0a1a);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            border-color: #E74C3C;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2);
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #E74C3C;
+        }
+        
+        .schedule-section {
+            background: #01010f;
+            padding: 80px 0;
+        }
+        
+        .schedule-card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #333846;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .schedule-card:hover {
+            border-color: #E74C3C;
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.2);
+        }
+        
+        .badge-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 0;
+        }
+        
+        .badge-card {
+            background: linear-gradient(145deg, #01010f, #0a0a1a);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+        }
+        
+        .badge-card:hover {
+            border-color: #E74C3C;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2);
+        }
+        
+        .badge-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #E74C3C, #C0392B, #95A5A6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(231, 76, 60, 0.5);
+            animation: badgeGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes badgeGlow {
+            0% { box-shadow: 0 0 30px rgba(231, 76, 60, 0.5); }
+            100% { box-shadow: 0 0 40px rgba(231, 76, 60, 0.8); }
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #1A1A1A 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="waves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0 50 Q25 25 50 50 T100 50" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="2"/></pattern></defs><rect width="100" height="100" fill="url(%23waves)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .social-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #E74C3C;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-btn:hover {
+            background: #01010f;
+            color: #E74C3C;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 200px;
+            background: linear-gradient(145deg, #333846, #2a2f3a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid #333846;
+        }
+        
+        .gallery-item:hover {
+            border-color: #E74C3C;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        /* Grey wave animation for background */
+        .grey-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #2C3E50, #34495E);
+            opacity: 0.1;
+            animation: greyWave 6s ease-in-out infinite;
+        }
+        
+        @keyframes greyWave {
+            0%, 100% { transform: translateX(0) scaleY(1); }
+            50% { transform: translateX(-20px) scaleY(1.1); }
+        }
+        
+        @media (max-width: 768px) {
+            .run-hero h1 {
+                font-size: 2.5rem;
+            }
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+        <div class="top-header-info">
+            <div class="email-info">
+                <a href="emailto:example@email.com">strengthbarathletes@gmail.com</a>
+                <p class="location-desp">Darshanam Club Life Junction of Panchavati Canal Road, Club Life Rd, Gorwa, Vadodara, Gujarat</p>
+            </div>
+        </div>
+        <div class="ak-main_header">
+            <div class="ak-main_header_in style-2">
+                <div class="ak-main-header-left d-flex align-items-center gap-5">
+                    <a class="ak-site_branding" href="index.html">
+                        <img src="assets/img/banner.png" alt="...">
+                    </a>
+                    <div class="ak-nav ak-medium">
+                        <ul class="ak-nav_list left-0">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="founder.html">Founder</a>
+                            </li>
+                            <li>
+                                <a href="calender.html">Calender</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            <li>
+                                <a href="1mile-run.html">1 milerun club</a>
+                            </li>
+
+
+                            <li>
+                                <a href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="ak-main-header-right">
+                    <a href="contact-us.html" class="button-primary color2">
+                        BECOME A MEMBER
+                    </a>
+                    <div class="button-offcanva style-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Start offcanvas body -->
+    <div class="offcanvas offcanvas-end style-2" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white style-2" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-body-coustom-style">
+                <div class="location-contant">
+                    <h5 class="location-contant-title">LOCATION & CONTACT</h5>
+                    <h6 class="location-contant-text"><span>Address:</span> Darshanam Club Life Junction of Panchavati Canal Road, Club Life Rd, Gorwa, Vadodara, Gujarat 390016</h6>
+                    <h6 class="location-contant-text"><span>Email: </span><a
+                            href="emailto:example@email.com">strengthbarathletes@gmail.com</a></h6>
+                    <h6 class="location-contant-text"><span>Open Hour:</span> Mon - Sat: 6AM - 9PM</h6>
+                    <div class="ak-height-40 ak-height-lg-40"></div>
+                    <div class="phone">
+                        <a href="tel:(406)5550120" class="d-flex align-items-center gap-3">
+                            <span class="icon">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                    <g clip-path="url(#clip0_2083_460)">
+                                        <path
+                                            d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2083_460">
+                                            <rect width="16" height="16" fill="white"
+                                                transform="translate(12 12.0137)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <span class="title">+918160964128</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End offcanvas body -->
+
+    <!-- Hero Section -->
+    <section class="run-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="run-hero-content">
+                        <div class="logo-section mb-4">
+                            <img src="images/1milerun.PNG" alt="1Mile Run Club Official Logo" class="official-logo">
+                        </div>
+                        <h1>🏃‍♂️ 1Mile Run Club</h1>
+                        <p>A short, powerful run to encourage fitness in a fun and welcoming environment. Open to all ages and fitness levels. No competition, no pressure — just community and movement.</p>
+                        <a href="https://www.instagram.com/1milerun/" class="button-primary color2">Join the Run</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="location-card">
+                                <div class="location-icon">
+                                    🏃‍♂️
+                                </div>
+                                <h5>Race Course</h5>
+                                <p>July 8, 2025</p>
+                                <small>6:00 AM</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="location-card">
+                                <div class="location-icon">
+                                    🌳
+                                </div>
+                                <h5>Sayaji Garden</h5>
+                                <p>June 30, 2025</p>
+                                <small>6:00 AM</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="location-card">
+                                <div class="location-icon">
+                                    🎯
+                                </div>
+                                <h5>More Locations</h5>
+                                <p>Coming Soon</p>
+                                <small>Stay Tuned</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>🤝 Why Join?</h2>
+                    <p class="text-muted">Discover the amazing benefits of being part of our running community</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            ❤️
+                        </div>
+                        <h5>Improve Cardiovascular Health</h5>
+                        <p>Build a stronger heart and improve your overall fitness with regular running.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            ⏰
+                        </div>
+                        <h5>Build Discipline & Consistency</h5>
+                        <p>Develop healthy habits and maintain a consistent fitness routine.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            👥
+                        </div>
+                        <h5>Make New Friends with Fitness</h5>
+                        <p>Connect with like-minded individuals and grow strong through shared experiences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            🌞
+                        </div>
+                        <h5>Step Outside & Enjoy the Open Air</h5>
+                        <p>Step away from screens and breathe in the city’s fresh energy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Highlights Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>📸 Community Highlights</h2>
+                    <p class="text-muted">Hear from our amazing community members</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <!-- <img src="assets/img/avatar_1.png" alt="Riya" class="testimonial-avatar"> -->
+                        <p>"I never thought I could run a mile. Now it's my favorite part of the week! The community is so supportive."</p>
+                        <h6>Pratik, 27</h6>
+                        <small class="text-muted">Regular Runner</small>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <!-- <img src="assets/img/avatar_2.png" alt="Amit" class="testimonial-avatar"> -->
+                        <p>"The 1 Mile Run helped me build consistency in my fitness journey. Great way to start the day!"</p>
+                        <h6>Nakul, 20</h6>
+                        <small class="text-muted">Fitness Enthusiast</small>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <!-- <img src="assets/img/avatar_3.png" alt="Priya" class="testimonial-avatar"> -->
+                        <p>"Love exploring different locations in Vadodara while staying fit. The group energy is incredible!"</p>
+                        <h6>Vaishal, 26</h6>
+                        <small class="text-muted">Adventure Seeker</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>🔄 Consistency Builds Strength</h2>
+                    <p class="text-muted">Join us every week for amazing runs across Vadodara</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="schedule-card">
+                        <div>
+                            <h5>📍 Race Course</h5>
+                            <p class="mb-0">Saturday, July 8, 2025 | 6:00 AM</p>
+                        </div>
+                        <span class="badge bg-success">Finished</span>
+                    </div>
+                    <div class="schedule-card">
+                        <div>
+                            <h5>🌳 Sayaji Garden</h5>
+                            <p class="mb-0">Saturday, June 30, 2025 | 6:00 AM</p>
+                        </div>
+                        <span class="badge bg-success">Finished</span>
+                    </div>
+                    <!-- <div class="schedule-card">
+                        <div>
+                            <h5>🏘️ Fatehgunj</h5>
+                            <p class="mb-0">Sunday, Aug 18, 2025 | 6:00 AM</p>
+                        </div>
+                        <span class="badge bg-secondary">Upcoming</span>
+                    </div> -->
+                    <div class="schedule-card">
+                        <div>
+                            <h5>🎯 More Locations</h5>
+                            <p class="mb-0">Every Sunday | 6:00 AM</p>
+                        </div>
+                        <span class="badge bg-info">TBA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="badge-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>🏆 Achievement Badges</h2>
+                    <p class="text-muted">Earn badges for your consistency and dedication</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            🥉
+                        </div>
+                        <h5>First Mile</h5>
+                        <p>Complete your first 1-mile run</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            🥈
+                        </div>
+                        <h5>Consistent Runner</h5>
+                        <p>Join 5 consecutive runs</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            🥇
+                        </div>
+                        <h5>Explorer</h5>
+                        <p>Run at 3 different locations</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="badge-card">
+                        <div class="badge-icon">
+                            👑
+                        </div>
+                        <h5>Community Leader</h5>
+                        <p>Bring 3 friends to join</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>📸 Run & Talk Gallery</h2>
+                    <p class="text-muted">Light conversations on health, mindset, and life while running</p>
+                </div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <span>🏃‍♂️ Morning Vibes</span>
+                </div>
+                <div class="gallery-item">
+                    <span>🌅 Sunrise Runs</span>
+                </div>
+                <div class="gallery-item">
+                    <span>👥 Community Spirit</span>
+                </div>
+                <div class="gallery-item">
+                    <span>🎯 Goal Setting</span>
+                </div>
+                <div class="gallery-item">
+                    <span>💪 Strength Building</span>
+                </div>
+                <div class="gallery-item">
+                    <span>🌿 Nature Connection</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.svg" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <div class="location-contact">
+                    <h5 class="title">LOCATION & CONTACT</h5>
+                    <p class="address"><span>Address:</span> Darshanam Club Life, Junction of Panchavati Canal Road
+                        <br> Gorwa, Vadodara, Gujarat 390016
+                    </p>
+                    <a href="mailto:example@email.com" class="email"><span>Email:</span> strengthbarathletes@gmail.com</a>
+                    <p><span class="time">Open Hour:</span> Mon - Sat : 6:00 AM - 9:00 PM </p>
+                </div>
+
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title">QUICK LINK</h5>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="trainers.html">Trainer</a>
+                        <a href="contact-us.html">Contact Us</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title">SOCIAL</h5>
+                        <a href="https://www.instagram.com/strengthbarathlete">Instagram</a>
+                        <a href="https://www.youtube.com/@Calitalks">Youtube</a>
+                    </div>
+                </div>
+
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/banner.png" alt="logo">
+                    </div>
+                    <p class="desp">Gujarat's biggest open-air calisthenics park, located in Vadodara.</p>
+                    <a href="tel:+918160964128" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_46035324)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_46035324">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">+91 8160964128</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p>Copyright 2025, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <span class="ak-scrollup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+                fill="currentColor" />
+        </svg>
+    </span>
+
+    <!-- Script -->
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/lightgallery.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html> 

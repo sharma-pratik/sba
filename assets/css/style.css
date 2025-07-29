@@ -5616,3 +5616,107 @@ select.form-select option {
   filter: grayscale(100%);
   opacity: 0.5;
 }
+
+/* Creative 1Mile Run Button Styles */
+.button-1mile-run {
+  background: linear-gradient(135deg, #E74C3C 0%, #C0392B 50%, #A93226 100%);
+  border: 2px solid #E74C3C;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 25px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-1mile-run::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.button-1mile-run:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
+  background: linear-gradient(135deg, #C0392B 0%, #A93226 50%, #E74C3C 100%);
+  border-color: #C0392B;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button-1mile-run:hover::before {
+  left: 100%;
+}
+
+.button-1mile-run .run-icon {
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.button-1mile-run .run-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header specific styling */
+.ak-main-header-right .button-1mile-run {
+  margin-right: 10px;
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+/* Hero section specific styling */
+.hero-content-2 .button-1mile-run {
+  font-size: 16px;
+  padding: 15px 30px;
+  margin-right: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .button-1mile-run {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  
+  .hero-content-2 .button-1mile-run {
+    font-size: 14px;
+    padding: 12px 25px;
+    margin-bottom: 10px;
+  }
+}
