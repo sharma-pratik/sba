@@ -3184,6 +3184,57 @@ select.form-select option {
 /*--------------------------------------------------------------
   15. About
 ----------------------------------------------------------------*/
+/* About Us Banner */
+.about-us-banner {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.banner-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Responsive Design for About Us Banner */
+@media screen and (max-width: 1199px) {
+  .banner-image img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner-image img {
+    max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner-image img {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-image img {
+    max-height: 300px;
+  }
+}
+
 .about-section {
   display: flex;
   justify-content: space-between;
