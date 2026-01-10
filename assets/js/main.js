@@ -390,6 +390,17 @@
       toggleThumb: true,
     });
   }
+  if ($.exists("#hyrox-gallery")) {
+    const hyroxGalleryDiv = document.getElementById("hyrox-gallery");
+    lightGallery(hyroxGalleryDiv, {
+      selector: ".item a",
+      addClass: "lg-custom-thumbnails",
+      animateThumb: true,
+      zoomFromOrigin: true,
+      allowMediaOverlap: true,
+      toggleThumb: true,
+    });
+  }
 
   /*--------------------------------------------------------------
     10. Auto Counter funfact
