@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Thememarch" />
+    <!-- Favicon Icon -->
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <!-- Site Title -->
+    <title>HYROX Training Club - Strength Bar Athlete</title>
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/aos.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        /* HYROX Theme - Bold & Dynamic */
+        .hyrox-hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            padding: 120px 0 80px;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 991px) {
+            .hyrox-hero {
+                margin-top: 80px;
+                padding: 100px 0 60px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hyrox-hero {
+                margin-top: 70px;
+                padding: 80px 0 50px;
+            }
+        }
+        
+        .hyrox-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/img/hero_slider_bg_1.png') center/cover;
+            opacity: 0.05;
+        }
+        
+        .hyrox-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hyrox-logo-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hyrox-logo {
+            font-size: 120px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-family: var(--heading-font-family);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .hyrox-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .hyrox-hero .subtitle {
+            font-size: 1.5rem;
+            color: #f67a45;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .hyrox-hero p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .official-badge {
+            background: linear-gradient(135deg, #f67a45, #e55a2b);
+            border-radius: 10px;
+            padding: 15px 30px;
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 25px rgba(246, 122, 69, 0.4);
+        }
+        
+        .what-is-hyrox {
+            background: #01010f;
+            padding: 100px 0;
+        }
+        
+        .what-is-hyrox h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        .what-is-hyrox p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #e7e7e7;
+            margin-bottom: 20px;
+        }
+        
+        .hyrox-race-format {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 0;
+        }
+        
+        .race-format-card {
+            background: linear-gradient(145deg, #01010f, #0a0a1a);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .race-format-card:hover {
+            border-color: #f67a45;
+            box-shadow: 0 10px 30px rgba(246, 122, 69, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .race-format-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #f67a45;
+            margin-bottom: 20px;
+            font-family: var(--heading-font-family);
+        }
+        
+        .training-club-section {
+            background: #01010f;
+            padding: 100px 0;
+        }
+        
+        .training-club-card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+        }
+        
+        .training-club-card:hover {
+            border-color: #f67a45;
+            box-shadow: 0 10px 30px rgba(246, 122, 69, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .training-club-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f67a45, #e55a2b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            box-shadow: 0 0 25px rgba(246, 122, 69, 0.4);
+        }
+        
+        .benefits-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 100px 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(145deg, #01010f, #0a0a1a);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #333846;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-card:hover {
+            border-color: #f67a45;
+            box-shadow: 0 10px 30px rgba(246, 122, 69, 0.3);
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f67a45, #e55a2b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            box-shadow: 0 0 25px rgba(246, 122, 69, 0.4);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/img/hero_slider_bg_1.png') center/cover;
+            opacity: 0.05;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-section h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        
+        .stats-section {
+            background: #01010f;
+            padding: 80px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #f67a45;
+            font-family: var(--heading-font-family);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: #e7e7e7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .hyrox-logo {
+                font-size: 60px;
+                letter-spacing: 5px;
+            }
+            
+            .hyrox-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .what-is-hyrox h2,
+            .cta-section h2 {
+                font-size: 2.5rem;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+        <div class="top-header-info">
+            <div class="email-info">
+                <a href="emailto:example@email.com">strengthbarathletes@gmail.com</a>
+                <p class="location-desp">Darshanam Club Life Junction of Panchavati Canal Road, Club Life Rd, Gorwa, Vadodara, Gujarat</p>
+            </div>
+        </div>
+        <div class="ak-main_header">
+            <div class="ak-main_header_in style-2">
+                <div class="ak-main-header-left d-flex align-items-center gap-5">
+                    <a class="ak-site_branding" href="index.html">
+                        <img src="assets/img/banner.png" alt="...">
+                    </a>
+                    <div class="ak-nav ak-medium">
+                        <ul class="ak-nav_list left-0">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="founder.html">Founder</a>
+                            </li>
+                            <li>
+                                <a href="calender.html">Calender</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            <li>
+                                <a href="1mile-run.html">1 milerun club</a>
+                            </li>
+                            <li>
+                                <a href="hyrox.html">HYROX</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="ak-main-header-right">
+                    <a href="contact-us.html" class="button-primary color2">
+                        BECOME A MEMBER
+                    </a>
+                    <div class="button-offcanva style-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Start offcanvas body -->
+    <div class="offcanvas offcanvas-end style-2" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white style-2" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-body-coustom-style">
+                <div class="location-contant">
+                    <h5 class="location-contant-title">LOCATION & CONTACT</h5>
+                    <h6 class="location-contant-text"><span>Address:</span> Darshanam Club Life Junction of Panchavati Canal Road, Club Life Rd, Gorwa, Vadodara, Gujarat 390016</h6>
+                    <h6 class="location-contant-text"><span>Email: </span><a
+                            href="emailto:example@email.com">strengthbarathletes@gmail.com</a></h6>
+                    <h6 class="location-contant-text"><span>Open Hour:</span> Mon - Sat: 6AM - 9PM</h6>
+                    <div class="ak-height-40 ak-height-lg-40"></div>
+                    <div class="phone">
+                        <a href="tel:(406)5550120" class="d-flex align-items-center gap-3">
+                            <span class="icon">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                    <g clip-path="url(#clip0_2083_460)">
+                                        <path
+                                            d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2083_460">
+                                            <rect width="16" height="16" fill="white"
+                                                transform="translate(12 12.0137)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <span class="title">+918160964128</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End offcanvas body -->
+
+    <!-- Hero Section -->
+    <section class="hyrox-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="hyrox-hero-content text-center">
+                        <div class="hyrox-logo-section">
+                            <div class="hyrox-logo">HYROX</div>
+                            <div class="official-badge">Vadodara's First Official HYROX Training Club</div>
+                        </div>
+                        <h1>Strength Bar Athlete × HYROX India</h1>
+                        <p class="subtitle">Pioneering HYROX Training in Vadodara</p>
+                        <p>We are proud to be Vadodara's first official HYROX Training Club Partner, working in collaboration with HYROX India to bring world-class fitness racing training to our community. Our state-of-the-art facility is equipped with official HYROX machines and dedicated running spaces, creating the perfect environment for athletes to prepare for their HYROX journey.</p>
+                        <a href="contact-us.html" class="button-primary color2" style="margin-right: 15px;">Start Training With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-number">1st</div>
+                        <div class="stat-label">Official Training Club in Vadodara</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Official HYROX Equipment</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number">1km</div>
+                        <div class="stat-label">Dedicated Running Track</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Perfect Training Environment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="what-is-hyrox">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2>Our Partnership with HYROX India</h2>
+                    <p>Strength Bar Athlete is honored to be the first official HYROX Training Club in Vadodara, partnering with HYROX India to bring world-class fitness racing training to our community. This collaboration represents a significant milestone in making HYROX training accessible to athletes in Gujarat.</p>
+                    <p>Through our partnership with HYROX India, we have access to official training methodologies, equipment standards, and the latest developments in the sport. Our coaches are trained to deliver authentic HYROX training experiences that align with global standards.</p>
+                    <p>This collaboration allows us to provide our members with the most comprehensive HYROX training available in the region, combining our expertise in functional fitness with HYROX India's official training protocols and race preparation strategies.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="race-format-card">
+                        <div class="race-format-number">1st</div>
+                        <h3>Official Training Club</h3>
+                        <p>Vadodara's first official HYROX Training Club Partner, recognized by HYROX India.</p>
+                    </div>
+                    <div class="race-format-card">
+                        <div class="race-format-number">100%</div>
+                        <h3>Official Partnership</h3>
+                        <p>Direct collaboration with HYROX India ensures authentic training methods and equipment standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Train at SBA Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2>Why Choose Strength Bar Athlete for HYROX Training?</h2>
+                    <p class="text-muted">Vadodara's premier destination for HYROX preparation</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏆</div>
+                        <h5>First Official Training Club</h5>
+                        <p>As Vadodara's first official HYROX Training Club, we bring authentic, certified training directly to your city. No need to travel far - world-class HYROX training is now in Vadodara.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚙️</div>
+                        <h5>Official HYROX Equipment</h5>
+                        <p>Train with the exact same machines and equipment used in official HYROX races. Our facility is equipped with official HYROX-approved equipment for authentic training experiences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🌳</div>
+                        <h5>Perfect Training Environment</h5>
+                        <p>Our open-air facility provides the perfect environment for HYROX training - fresh air, natural lighting, dedicated 1km running track, and all the space you need to push your limits.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🤝</div>
+                        <h5>Direct HYROX India Partnership</h5>
+                        <p>Our collaboration with HYROX India ensures you receive the latest training methodologies, official protocols, and direct support from the HYROX community in India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Start Your HYROX Journey at Vadodara's First Official Training Club</h2>
+                <p>Join us at Strength Bar Athlete and experience world-class HYROX training right here in Vadodara. With official HYROX equipment, dedicated running space, and expert coaching in partnership with HYROX India, we're here to help you achieve your fitness racing goals.</p>
+                <a href="contact-us.html" class="button-primary color2" style="margin-right: 15px;">Start Training Today</a>
+                <a href="https://hyrox.co.in/" target="_blank" class="button-primary color2">Learn About HYROX India</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Footer -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.svg" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <div class="location-contact">
+                    <h5 class="title">LOCATION & CONTACT</h5>
+                    <p class="address"><span>Address:</span> Darshanam Club Life, Junction of Panchavati Canal Road
+                        <br> Gorwa, Vadodara, Gujarat 390016
+                    </p>
+                    <a href="mailto:example@email.com" class="email"><span>Email:</span> strengthbarathletes@gmail.com</a>
+                    <p><span class="time">Open Hour:</span> Mon - Sat : 6:00 AM - 9:00 PM </p>
+                </div>
+
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title">QUICK LINK</h5>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="hyrox.html">HYROX</a>
+                        <a href="contact-us.html">Contact Us</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title">SOCIAL</h5>
+                        <a href="https://www.instagram.com/strengthbarathlete">Instagram</a>
+                        <a href="https://www.youtube.com/@Calitalks">Youtube</a>
+                    </div>
+                </div>
+
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/banner.png" alt="logo">
+                    </div>
+                    <p class="desp">Gujarat's biggest open-air calisthenics park, located in Vadodara.</p>
+                    <a href="tel:+918160964128" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_46035324)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_46035324">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">+91 8160964128</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p>Copyright 2025, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <span class="ak-scrollup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+                fill="currentColor" />
+        </svg>
+    </span>
+
+    <!-- Script -->
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/lightgallery.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
